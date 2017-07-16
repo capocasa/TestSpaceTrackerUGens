@@ -1,4 +1,4 @@
-TestPlayBufS : UnitTest {
+TestPlayBufT : UnitTest {
   
   var
     s
@@ -23,11 +23,11 @@ TestPlayBufS : UnitTest {
     data = [ 48.0, 0.01, 48.0, 0.01, 48.0, 0.01, 48.0, 0.01, 48.0, 0.01, 48.0, 0.01, 48.0, 0.01, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05 ]
 ;
 
-    SynthDef(\TestPlayBufS, {|rate=0, t_trig=0, start=0, buffer, bufferS|
+    SynthDef(\TestPlayBufT, {|rate=0, t_trig=0, start=0, buffer, bufferS|
       var control, rec;
-      control = PlayBufS.kr(2, bufferS, rate, t_trig, start);
+      control = PlayBufT.kr(2, bufferS, rate, t_trig, start);
       rec = RecordBuf.kr(control, buffer, run: rate>0, loop:0);
-      SendReply.kr(Done.kr(rec), '/TestPlayBufS');
+      SendReply.kr(Done.kr(rec), '/TestPlayBufT');
     }).send(s);
     s.sync;
 
@@ -46,12 +46,12 @@ TestPlayBufS : UnitTest {
         //d.as(Array).round(0.00001).asCompileString.postln;
         datar = d.as(Array);
       });
-    }, '/TestPlayBufS', s.addr).oneShot;
+    }, '/TestPlayBufT', s.addr).oneShot;
   
     s.sync;
 
     datar = nil;
-    Synth(\TestPlayBufS, [\rate, 1, \buffer, buffer.bufnum, \bufferS, bufferS.bufnum], s);
+    Synth(\TestPlayBufT, [\rate, 1, \buffer, buffer.bufnum, \bufferS, bufferS.bufnum], s);
     this.asynchAssert({ datar.notNil }, {
       this.assertEquals(datar.round(0.00001), data.round(0.00001));
     }, "data timeout", 1);
@@ -64,13 +64,13 @@ TestPlayBufS : UnitTest {
 
     data = [ 48.0, 0.01, 48.0, 0.01, 48.0, 0.01, 48.0, 0.01, 48.0, 0.01, 48.0, 0.01, 48.0, 0.01, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 48.0, 0.01, 48.0, 0.01, 48.0, 0.01, 48.0, 0.01, 48.0, 0.01, 48.0, 0.01, 48.0, 0.01, 48.0, 0.01, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05 ];
 
-    SynthDef(\TestPlayBufS, {|rate=0, t_trig=0, start=0, buffer, bufferS|
+    SynthDef(\TestPlayBufT, {|rate=0, t_trig=0, start=0, buffer, bufferS|
       var control, rec;
       start  = PlayBuf.kr(1, Array.fill(150, 0).put(15, 0).put(30, 0.12).put(45, 0.02).as(LocalBuf));
       t_trig = PlayBuf.kr(1, Array.fill(150, 0).put(15, 1).put(30,    1).put(45,    1).as(LocalBuf));
-      control = PlayBufS.kr(2, bufferS, rate, t_trig, start);
+      control = PlayBufT.kr(2, bufferS, rate, t_trig, start);
       rec = RecordBuf.kr(control, buffer, run: rate>0, loop:0);
-      SendReply.kr(Done.kr(rec), '/TestPlayBufS');
+      SendReply.kr(Done.kr(rec), '/TestPlayBufT');
     }).send(s);
     s.sync;
 
@@ -90,11 +90,11 @@ TestPlayBufS : UnitTest {
         d.round(0.00001).asCompileString.postln;
         datar = d;
       });
-    }, '/TestPlayBufS', s.addr).oneShot;
+    }, '/TestPlayBufT', s.addr).oneShot;
   
     s.sync;
 
-    Synth(\TestPlayBufS, [\rate, 1, \buffer, buffer.bufnum, \bufferS, bufferS.bufnum], s);
+    Synth(\TestPlayBufT, [\rate, 1, \buffer, buffer.bufnum, \bufferS, bufferS.bufnum], s);
     
     this.asynchAssert({ datar.notNil }, {
       this.assertEquals(datar.round(0.00001), data.round(0.00001));
@@ -104,7 +104,7 @@ TestPlayBufS : UnitTest {
 
 }
 
-TestRecordBufS : UnitTest {
+TestRecordBufT : UnitTest {
   
   var
     s
@@ -122,10 +122,10 @@ TestRecordBufS : UnitTest {
   
     var bufferS, synth, buffer, data;
     
-    SynthDef(\TestRecordBufS, {|rate=0, t_trig=0, start=0, buffer, bufferS|
+    SynthDef(\TestRecordBufT, {|rate=0, t_trig=0, start=0, buffer, bufferS|
       var control;
       control = PlayBuf.kr(2, buffer, rate, t_trig, start);
-      RecordBufS.kr([control], bufferS, rate>0, 2);
+      RecordBufT.kr([control], bufferS, rate>0, 2);
     }).send(s);
     s.sync;
 
@@ -150,7 +150,7 @@ TestRecordBufS : UnitTest {
     
     s.sync;
     
-    Synth(\TestRecordBufS, [\rate, 1, \buffer, buffer.bufnum, \bufferS, bufferS.bufnum], s);
+    Synth(\TestRecordBufT, [\rate, 1, \buffer, buffer.bufnum, \bufferS, bufferS.bufnum], s);
     
     this.asynchAssert({ data.notNil }, {
       //data.asCompileString.post;
@@ -158,15 +158,15 @@ TestRecordBufS : UnitTest {
     }, "data timeout", 1); 
   }
   
-  // Free before RecordBufS is done
+  // Free before RecordBufT is done
   test_cutoff {
   
     var bufferS, synth, buffer, data;
-    // DoneAction in PlayBuf, not in RecordBufS
-    SynthDef(\TestRecordBufS, {|rate=0, t_trig=0, start=0, buffer, bufferS|
+    // DoneAction in PlayBuf, not in RecordBufT
+    SynthDef(\TestRecordBufT, {|rate=0, t_trig=0, start=0, buffer, bufferS|
       var control;
       control = PlayBuf.kr(2, buffer, rate, t_trig, start, 0, 2);
-      RecordBufS.kr([control], bufferS, rate>0);
+      RecordBufT.kr([control], bufferS, rate>0);
     }).send(s);
     s.sync;
     buffer = Buffer.loadCollection(s,
@@ -188,7 +188,7 @@ TestRecordBufS : UnitTest {
     }, '/n_end', s.addr).oneShot;
     
     s.sync;
-    Synth(\TestRecordBufS, [\rate, 1, \buffer, buffer.bufnum, \bufferS, bufferS.bufnum], s);
+    Synth(\TestRecordBufT, [\rate, 1, \buffer, buffer.bufnum, \bufferS, bufferS.bufnum], s);
     
     this.asynchAssert({ data.notNil }, {
       this.assertEquals(data.round(0.00001), [ 0.016000000759959, 48.0, 0.10000000149012, 0.032000001519918, 49.0, 0.20000000298023, 0.048000000417233, 50.0, 0.30000001192093, 0.064000003039837, 51.0, 0.40000000596046, 0.079999998211861, 52.0, 0.5, 0.0, 0.0, 0.0 ].round(0.00001));
@@ -198,8 +198,8 @@ TestRecordBufS : UnitTest {
   test_stop {
   
     var bufferS, synth, buffer, data;
-    // DoneAction in PlayBuf, not in RecordBufS
-    SynthDef(\TestRecordBufS, {|rate=0, t_trig=0, start=0, buffer, bufferS|
+    // DoneAction in PlayBuf, not in RecordBufT
+    SynthDef(\TestRecordBufT, {|rate=0, t_trig=0, start=0, buffer, bufferS|
       var control;
       control = PlayBuf.kr(2, buffer, rate, t_trig, start);
       
@@ -213,7 +213,7 @@ TestRecordBufS : UnitTest {
 
         1,
       ].as(LocalBuf));
-      RecordBufS.kr([control], bufferS, rate>0, 2);
+      RecordBufT.kr([control], bufferS, rate>0, 2);
     }).send(s);
     s.sync;
     buffer = Buffer.loadCollection(s,
@@ -236,7 +236,7 @@ TestRecordBufS : UnitTest {
     }, '/n_end', s.addr).oneShot;
     
     s.sync;
-    Synth(\TestRecordBufS, [\rate, 1, \buffer, buffer.bufnum, \bufferS, bufferS.bufnum], s);
+    Synth(\TestRecordBufT, [\rate, 1, \buffer, buffer.bufnum, \bufferS, bufferS.bufnum], s);
     
     this.asynchAssert({ data.notNil }, {
       this.assertEquals(data.round(0.00001), [ 0.0080000003799796, 48.0, 0.10000000149012, 0.016000000759959, 49.0, 0.20000000298023, 0.048000000417233, 50.0, 0.30000001192093, 0.064000003039837, 51.0, 0.40000000596046, 0.079999998211861, 52.0, 0.5 ].round(0.00001));
