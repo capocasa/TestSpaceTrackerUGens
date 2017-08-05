@@ -244,3 +244,97 @@ TestRecordBufT : UnitTest {
   }
 
 }
+
+TestBufFramesT : UnitTest {
+  var
+    s, b, coll, startTime, length, responder, is, shall
+  ;
+  
+  setUp {
+    coll = [1,32,0.5,33,1,34];
+    s = Server.default;
+    this.bootServer(s);
+    b = Buffer.allocTimed(s);
+    s.sync;
+    b.sendCollection([1,32,0.5,33,1,34]);
+    s.sync;
+    responder = OSCFunc({|msg|
+      is = msg[3..]; 
+    }, '/TestBufFramesT', s.addr);
+    s.sync;
+    is = nil;
+    s.sync;
+
+  }
+
+  test_basic {
+    startTime = 0;
+    length = 0;
+    shall = [ 3, 0, 0, 0];
+    this.assertFrames;
+  }
+  
+  test_pre {
+    startTime = 0.5;
+    length = 0;
+    shall = [ 3, 0, 0.5, 0 ];
+    this.assertFrames;
+  }
+
+  test_post {
+    startTime = 0;
+    length = 2.25;
+    shall = [ 3, 0, 0, 0.25 ];
+    this.assertFrames;
+  }
+  
+  test_prepost {
+    startTime = 0.5;
+    length = 1.25;
+    shall = [ 3, 0, 0.5, 0.75 ];
+    this.assertFrames;
+  }
+  
+  test_pre_onnext {
+    startTime = 1;
+    length = 0;
+    shall = [2,1,0,0];
+    this.assertFrames;
+  }
+  
+  test_pre_onsecond {
+    startTime = 1.5;
+    length = 0;
+    shall = [1,2,0,0];
+    this.assertFrames;
+  }
+  
+  test_pre_onlast {
+    startTime = 0;
+    length = 1.5;
+    shall = [2,0,0,0];
+    this.assertFrames;
+  }
+  
+  test_pre_onsecondlast {
+    startTime = 0;
+    length = 1;
+    shall = [1,0,0,0];
+    this.assertFrames;
+  }
+
+  assertFrames {
+    {
+      SendReply.kr(DC.kr(1), '/TestBufFramesT', BufFramesT.kr(b, 1, startTime, length, 2));
+    }.play(s);
+    this.asynchAssert({is.notNil},{
+      this.assertEquals(is, shall);
+    }, "timeout", 1);
+  }
+
+  tearDown {
+    s.sync;
+    responder.free;
+  }
+}
+
