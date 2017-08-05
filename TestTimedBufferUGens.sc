@@ -322,6 +322,14 @@ TestBufFramesT : UnitTest {
     shall = [1,0,0,0];
     this.assertFrames;
   }
+  
+  test_overlength {
+    startTime = 0;
+    length = 3;
+    shall = [3,0,0,0];
+    this.assertFrames;
+  }
+
 
   assertFrames {
     {
