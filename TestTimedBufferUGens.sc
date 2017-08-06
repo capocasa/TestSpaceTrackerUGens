@@ -372,12 +372,30 @@ TestBufFramesT : UnitTest {
     length=0;
     shall=[26,0,0,0];
     this.assertFrames;
+    this.assertBoundaries;
+    
+    is=nil;
+    startTime=56.31;
+    length=0;
+    shall=[ 16, 10, Float.from32Bits(1082315144), 0];
+    this.assertFrames;
+    this.assertBoundaries;
+    //is[2].as32Bits.postln;
+    
+    is=nil;
+    startTime=0;
+    length=97.13121243;
+    shall=[19,0,0,Float.from32Bits(1076760480)];
+    this.assertFrames;
+    this.assertBoundaries;
+    //is[3].as32Bits.postln;
 
     is=nil;
     startTime=56.31;
     length=32.97;
     shall=[ 8, 10, Float.from32Bits(1082315144), Float.from32Bits(1048889600)];
     this.assertFrames;
+    this.assertBoundaries;
     //is[2].as32Bits.postln;
     //is[3].as32Bits.postln;
   }
@@ -389,11 +407,23 @@ TestBufFramesT : UnitTest {
 
     times = coll.unlace(channels+1).first;
 
-    startTimeShall = times[0..offset].put(offset, times[offset]-pre).sum.postln;
-    this.assertEquals(startTime.round(0.00001), startTimeShall.round(0.00001), "start sum");
+    if (startTime > 0) {
+      startTimeShall = times[0..offset].put(offset, times[offset]-pre).sum;
+    }{
+      startTimeShall = 0;
+    };
+    this.assertEquals(startTime.round(0.0001), startTimeShall.round(0.0001), "start sum");
 
-    lengthShall = times[offset..offset+frames-1].put(0, pre).put(frames-1, post).sum;
-    this.assertEquals(length.round(0.00001), lengthShall.round(0.00001), "length sum"); 
+    if (length > 0) {
+      if (startTime > 0) {
+        lengthShall = times[offset..offset+frames-1].put(0, pre).put(frames-1, post).sum;
+      }{
+        lengthShall = times[0..frames-1].put(frames-1,post).sum;
+      };
+    }{
+      lengthShall = 0;
+    };
+    this.assertEquals(length.round(0.0001), lengthShall.round(0.0001), "length sum"); 
   }
 
   assertFrames {
