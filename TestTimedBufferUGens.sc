@@ -353,6 +353,50 @@ TestBufFramesT : UnitTest {
     //is[2].as32Bits.postln;
   }
 
+  test_firstonly {
+    startTime = 0;
+    length = 0.5;
+    shall = [1, 0, 0, 0.5];
+    this.assertFrames;
+    //is[2].as32Bits.postln;
+  }
+  
+  test_lastonly {
+    startTime = 2.125;
+    length = 0;
+    shall = [ 1, 2, 0.375, 0 ];
+    this.assertFrames;
+    //is[2].as32Bits.postln;
+  }
+
+  test_shavefirst {
+    startTime = 0.25;
+    length = 0.5;
+    // Note: This is interesting- the first and last ist the same note, and it is correctly denoted
+    // 0.75 long by both first and last.
+    shall = [ 1, 0, 0.75, 0.75];
+    this.assertFrames;
+    //is[2].as32Bits.postln;
+  }
+  
+  test_shavelast {
+    startTime = 2;
+    length = 0.25;
+    // Note as above 
+    shall = [ ];
+    this.assertFrames;
+    //is[2].as32Bits.postln;
+  }
+  
+  test_shavecenter {
+    startTime = 1.125;
+    length = 0.25;
+    // Note as above 
+    shall = [ 1, 1, 0.375, 0.375 ];
+    this.assertFrames;
+    //is[2].as32Bits.postln;
+  }
+
   test_longer {
     coll =  [ 2.3359072208405, 113, 1.3918336629868, 120, 0.6624151468277, 24, 0.37146842479706, 86, 2.7888704538345, 14, 1.9270226955414, 65, 0.98531985282898, 113, 0.64883601665497, 104, 1.8623775243759, 23, 2.4141165018082, 117, 0.029054760932922, 44, 2.6779514551163, 74, 2.3031853437424, 41, 1.8753358125687, 110, 0.081579566001892, 2, 1.5765784978867, 86, 1.5339649915695, 4, 1.2851167917252, 53, 1.9376907348633, 33, 0.8805992603302, 76 ];
     
