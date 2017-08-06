@@ -355,6 +355,30 @@ TestBufFramesT : UnitTest {
 
   test_longer {
     coll =  [ 2.3359072208405, 113, 1.3918336629868, 120, 0.6624151468277, 24, 0.37146842479706, 86, 2.7888704538345, 14, 1.9270226955414, 65, 0.98531985282898, 113, 0.64883601665497, 104, 1.8623775243759, 23, 2.4141165018082, 117, 0.029054760932922, 44, 2.6779514551163, 74, 2.3031853437424, 41, 1.8753358125687, 110, 0.081579566001892, 2, 1.5765784978867, 86, 1.5339649915695, 4, 1.2851167917252, 53, 1.9376907348633, 33, 0.8805992603302, 76 ];
+    
+    startTime = 0;
+    length = 0;
+    shall = [20,0,0,0];
+    this.assertFrames;
+    this.assertBoundaries;
+    
+    is = nil;
+    startTime = 17.13719837;
+    length = 0;
+    shall = [9,11,Float.from32Bits(1064648160),0];
+    this.assertFrames;
+    this.assertBoundaries;
+    //is[2].as32Bits.postln;
+     
+    is = nil;
+    startTime = 0;
+    length = 9.1243213421421;
+    shall = [6,0,0,Float.from32Bits(1070166820)];
+    this.assertFrames;
+    //is[3].as32Bits.postln;
+    this.assertBoundaries;
+
+    is = nil;
     startTime = 11.622335910797;
     length = 9.1353964805603;
     shall = [6,8,Float.from32Bits(1068303616),Float.from32Bits(1052246016)];
@@ -362,6 +386,7 @@ TestBufFramesT : UnitTest {
     //is[2].as32Bits.postln;
     //is[3].as32Bits.postln;
     this.assertBoundaries;
+  
   }
 
   test_multichannel_long {
@@ -405,7 +430,7 @@ TestBufFramesT : UnitTest {
 
     #frames,offset,pre,post = shall;
 
-    times = coll.unlace(channels+1).first;
+    times = coll.unlace(channels??1+1).first;
 
     if (startTime > 0) {
       startTimeShall = times[0..offset].put(offset, times[offset]-pre).sum;
