@@ -250,25 +250,13 @@ TestBufFramesT : UnitTest {
     s, b, coll, startTime, length, responder, is, shall
   ;
  
-  setBuffer {
-    b = Buffer.allocTimed(s);
-    s.sync;
-    b.sendCollection(coll);
-    s.sync;
-  }
-
   setUp {
-    coll = [1,32,0.5,33,1,34];
     s = Server.default;
     this.bootServer(s);
-    this.setBuffer;
     responder = OSCFunc({|msg|
       is = msg[3..]; 
     }, '/TestBufFramesT', s.addr);
-    s.sync;
     is = nil;
-    s.sync;
-
   }
 
   test_basic {
@@ -359,12 +347,44 @@ TestBufFramesT : UnitTest {
   test_closeover {
     startTime = 1.0000001;
     length = 0;
-    shall = [ 2, 1, 0.49999988079071, 0 ];
+    shall = [ 2, 1, Float.from32Bits(1056964604), 0 ];
     this.assertFrames;
+    //is[2].as32Bits.postln;
   }
 
+  test_longer {
+    coll =  [ 2.3359072208405, 113, 1.3918336629868, 120, 0.6624151468277, 24, 0.37146842479706, 86, 2.7888704538345, 14, 1.9270226955414, 65, 0.98531985282898, 113, 0.64883601665497, 104, 1.8623775243759, 23, 2.4141165018082, 117, 0.029054760932922, 44, 2.6779514551163, 74, 2.3031853437424, 41, 1.8753358125687, 110, 0.081579566001892, 2, 1.5765784978867, 86, 1.5339649915695, 4, 1.2851167917252, 53, 1.9376907348633, 33, 0.8805992603302, 76 ];
+    startTime = 11.622335910797;
+    length = 9.1353964805603;
+    shall = [6,8,Float.from32Bits(1068303616),Float.from32Bits(1052246016)];
+    this.assertFrames;
+    //is[2].as32Bits.postln;
+    //is[3].as32Bits.postln;
+    this.assertBoundaries;
+  }
+
+  assertBoundaries {
+    var times, startTimeShall, lengthShall, frames, offset, pre, post;
+
+    #frames,offset,pre,post = shall;
+
+    times = coll.unlace.first;
+
+    startTimeShall = times[0..offset].put(offset, times[offset]-pre).sum.postln;
+    this.assertEquals(startTime.round(0.00001), startTimeShall.round(0.00001), "start sum");
+
+    lengthShall = times[offset..offset+frames-1].put(0, pre).put(frames-1, post).sum;
+    this.assertEquals(length.round(0.00001), lengthShall.round(0.00001), "length sum"); 
+  }
 
   assertFrames {
+    if (coll.isNil) {
+      coll = [1,32,0.5,33,1,34];
+    };
+    b = Buffer.allocTimed(s);
+    s.sync;
+    b.sendCollection(coll);
+    s.sync;
     {
       SendReply.kr(DC.kr(1), '/TestBufFramesT', BufFramesT.kr(b, 1, startTime, length, 2));
     }.play(s);
@@ -376,6 +396,8 @@ TestBufFramesT : UnitTest {
   tearDown {
     s.sync;
     responder.free;
+    b.free;
+    s.sync;
   }
 }
 
