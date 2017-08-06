@@ -276,14 +276,14 @@ TestBufFramesT : UnitTest {
   test_post {
     startTime = 0;
     length = 2.25;
-    shall = [ 3, 0, 0, 0.25 ];
+    shall = [ 3, 0, 0, 0.75 ];
     this.assertFrames;
   }
   
   test_prepost {
     startTime = 0.5;
     length = 1.25;
-    shall = [ 3, 0, 0.5, 0.75 ];
+    shall = [ 3, 0, 0.5, 0.25 ];
     this.assertFrames;
   }
   
