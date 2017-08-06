@@ -249,15 +249,19 @@ TestBufFramesT : UnitTest {
   var
     s, b, coll, startTime, length, responder, is, shall
   ;
-  
+ 
+  setBuffer {
+    b = Buffer.allocTimed(s);
+    s.sync;
+    b.sendCollection(coll);
+    s.sync;
+  }
+
   setUp {
     coll = [1,32,0.5,33,1,34];
     s = Server.default;
     this.bootServer(s);
-    b = Buffer.allocTimed(s);
-    s.sync;
-    b.sendCollection([1,32,0.5,33,1,34]);
-    s.sync;
+    this.setBuffer;
     responder = OSCFunc({|msg|
       is = msg[3..]; 
     }, '/TestBufFramesT', s.addr);
@@ -323,10 +327,39 @@ TestBufFramesT : UnitTest {
     this.assertFrames;
   }
   
-  test_overlength {
+  test_samelength {
     startTime = 0;
     length = 3;
     shall = [3,0,0,0];
+    this.assertFrames;
+  }
+  
+  test_overlength {
+    startTime = 0;
+    length = 4;
+    shall = [3,0,0,0];
+    this.assertFrames;
+  }
+  
+  test_overpre {
+    startTime = 0.5;
+    length = 4;
+    shall = [3,0,0.5,0];
+    this.assertFrames;
+  }
+
+  test_close {
+    startTime = 0.9999999;
+    length = 0;
+    shall = [ 3, 0, Float.from32Bits(872415232), 0 ];
+    this.assertFrames;
+    //is[2].as32Bits.postln;
+  }
+
+  test_closeover {
+    startTime = 1.0000001;
+    length = 0;
+    shall = [ 2, 1, 0.49999988079071, 0 ];
     this.assertFrames;
   }
 
