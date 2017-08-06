@@ -358,7 +358,6 @@ TestBufFramesT : UnitTest {
     length = 0.5;
     shall = [1, 0, 0, 0.5];
     this.assertFrames;
-    //is[2].as32Bits.postln;
   }
   
   test_lastonly {
@@ -366,7 +365,6 @@ TestBufFramesT : UnitTest {
     length = 0;
     shall = [ 1, 2, 0.375, 0 ];
     this.assertFrames;
-    //is[2].as32Bits.postln;
   }
 
   test_shavefirst {
@@ -376,16 +374,25 @@ TestBufFramesT : UnitTest {
     // 0.75 long by both first and last.
     shall = [ 1, 0, 0.75, 0.75];
     this.assertFrames;
-    //is[2].as32Bits.postln;
   }
   
   test_shavelast {
+    startTime = 1.75;
+    length = 0.25;
+    shall = [1, 2, 0.25, 0.25];
+    this.assertFrames;
+    
+    is = nil;
     startTime = 2;
     length = 0.25;
-    // Note as above 
-    shall = [ ];
+    shall = [1, 2, 0.25, 0.25];
     this.assertFrames;
-    //is[2].as32Bits.postln;
+    
+    is = nil;
+    startTime = 1.75;
+    length = 0.5;
+    shall = [1, 2, 0.5, 0.5 ];
+    this.assertFrames;
   }
   
   test_shavecenter {
@@ -394,7 +401,6 @@ TestBufFramesT : UnitTest {
     // Note as above 
     shall = [ 1, 1, 0.375, 0.375 ];
     this.assertFrames;
-    //is[2].as32Bits.postln;
   }
 
   test_longer {
