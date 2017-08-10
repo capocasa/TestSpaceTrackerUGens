@@ -561,3 +561,64 @@ TestBufFramesT : UnitTest {
   }
 }
 
+TestBufferExtS : UnitTest {
+  
+  var
+    s, b, p, f, a, c
+  ;
+ 
+  setUp {
+    s = Server.default;
+    this.bootServer(s);
+    b = Buffer.allocTimed(s,1,1,128);
+    s.sync;
+    b.updateInfo;
+    s.sync;
+    a = 128.collect{|i|i+1/128}.as(Signal);
+    b.sendCollection(a);
+    s.sync;
+    p = thisProcess.platform.defaultTempDir +/+ this.class.name ++2147483647.rand++".aiff";
+  }
+  
+  test_alloc {
+    b = Buffer.allocTimed(s,1,1,128);
+    this.assertEquals(b.class, Buffer, "1-1 class");
+    this.assertEquals(b.numChannels, 2, "1-1 numChannels");
+    this.assertEquals(b.numFrames, 128, "1-1 numFrames");
+    b.free;
+
+    b = Buffer.allocTimed(s,2,2,128);
+    this.assertEquals(b.class, Array, "2-1 class");
+    this.assertEquals(b.size, 2, "2-1 size");
+    this.assertEquals(b[0].class, Buffer, "2-1 0 class");
+    this.assertEquals(b[0].numChannels, 3, "2-1 0 numChannels");
+    this.assertEquals(b[1].class, Buffer, "2-1 1 class");
+    this.assertEquals(b[1].numChannels, 3, "2-1 1 numChannels");
+    b.free;
+  }
+
+  test_detect {
+    this.assertEquals(b.detectTimed(0.1,3), [ 17, 3, Float.from32Bits(1020054732), Float.from32Bits(1049572144) ]);
+    s.sync;
+  }
+
+  test_write {
+    b.writeTimed(p);
+    s.sync;
+    this.fromFile;
+    File.delete(p);
+    this.assertEquals(a, c, "entire");
+  
+    //b.writeTimed(b, "aiff", 0.1,3);
+    c.postln;
+  }
+
+  fromFile {
+    f = SoundFile.openRead(p);
+    c = Signal.newClear(f.numFrames*f.numChannels);
+    f.readData(c);
+    f.close;
+  }
+
+}
+
