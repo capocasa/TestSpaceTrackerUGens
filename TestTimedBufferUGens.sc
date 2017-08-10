@@ -398,8 +398,44 @@ TestBufFramesT : UnitTest {
   test_shavecenter {
     startTime = 1.125;
     length = 0.25;
-    // Note as above 
     shall = [ 1, 1, 0.25, 0.25 ];
+    this.assertFrames;
+  }
+  
+  test_shaveonly {
+    coll=[1.5,32];
+    startTime = 0.25;
+    length = 0.5;
+    shall = [ 1, 0, 0.5, 0.5];
+    this.assertFrames;
+  }
+  
+  test_zero {
+    coll=[];
+    startTime = 0.25;
+    length = 0.5;
+    shall = [ 0, 0, 0, 0];
+    this.assertFrames;
+    
+    is = nil;
+    coll=[];
+    startTime = 0;
+    length = 0.5;
+    shall = [ 0, 0, 0, 0];
+    this.assertFrames;
+    
+    is = nil;
+    coll=[];
+    startTime = 0.25;
+    length = 0;
+    shall = [ 0, 0, 0, 0];
+    this.assertFrames;
+    
+    is = nil;
+    coll=[];
+    startTime = 0;
+    length = 0;
+    shall = [ 0, 0, 0, 0];
     this.assertFrames;
   }
 
