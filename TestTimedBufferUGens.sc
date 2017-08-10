@@ -564,7 +564,7 @@ TestBufFramesT : UnitTest {
 TestBufferExtS : UnitTest {
   
   var
-    s, b, p, f, a, c
+    s, b, p, f, a, c, x
   ;
  
   setUp {
@@ -579,9 +579,13 @@ TestBufferExtS : UnitTest {
     s.sync;
     p = thisProcess.platform.defaultTempDir +/+ this.class.name ++2147483647.rand++".aiff";
   }
-  
+ 
+  tearDown {
+    b.free;
+    File.delete(p);
+  }
+
   test_alloc {
-    b = Buffer.allocTimed(s,1,1,128);
     this.assertEquals(b.class, Buffer, "1-1 class");
     this.assertEquals(b.numChannels, 2, "1-1 numChannels");
     this.assertEquals(b.numFrames, 128, "1-1 numFrames");
@@ -594,7 +598,6 @@ TestBufferExtS : UnitTest {
     this.assertEquals(b[0].numChannels, 3, "2-1 0 numChannels");
     this.assertEquals(b[1].class, Buffer, "2-1 1 class");
     this.assertEquals(b[1].numChannels, 3, "2-1 1 numChannels");
-    b.free;
   }
 
   test_detect {
@@ -606,11 +609,15 @@ TestBufferExtS : UnitTest {
     b.writeTimed(p);
     s.sync;
     this.fromFile;
-    File.delete(p);
     this.assertEquals(a, c, "entire");
   
-    //b.writeTimed(b, "aiff", 0.1,3);
-    c.postln;
+    b.writeTimed(p, "aiff", 0.1, 3);
+    this.fromFile;
+
+    x=Signal[ 0.024999998509884, 0.0625, 0.0703125, 0.078125, 0.0859375, 0.09375, 0.1015625, 0.109375, 0.1171875, 0.125, 0.1328125, 0.140625, 0.1484375, 0.15625, 0.1640625, 0.171875, 0.1796875, 0.1875, 0.1953125, 0.203125, 0.2109375, 0.21875, 0.2265625, 0.234375, 0.2421875, 0.25, 0.2578125, 0.265625, 0.2734375, 0.28125, 0.2890625, 0.296875, 0.27968740463257, 0.3125];
+    this.assertEquals(x, c, "trimmed");
+  
+    this.assertEquals(x.unlace(2)[0].sum.round(0.000001), 3, "trimmed sum");
   }
 
   fromFile {

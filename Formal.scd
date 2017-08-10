@@ -1,7 +1,10 @@
 (
-  TestPlayBufT.run
-  TestRecordBufT.run
+  TestPlayBufT.run;
 
-  TestBufFramesT.run
+  TestRecordBufT.run;
+
+  TestBufFramesT.run;
+
+  TestBufferExtS.run;
 )
 
