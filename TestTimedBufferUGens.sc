@@ -372,7 +372,7 @@ TestBufFramesT : UnitTest {
     length = 0.5;
     // Note: This is interesting- the first and last ist the same note, and it is correctly denoted
     // 0.75 long by both first and last.
-    shall = [ 1, 0, 0.75, 0.75];
+    shall = [ 1, 0, 0.5, 0.5];
     this.assertFrames;
   }
   
@@ -399,7 +399,7 @@ TestBufFramesT : UnitTest {
     startTime = 1.125;
     length = 0.25;
     // Note as above 
-    shall = [ 1, 1, 0.375, 0.375 ];
+    shall = [ 1, 1, 0.25, 0.25 ];
     this.assertFrames;
   }
 
