@@ -1,10 +1,10 @@
 (
-  TestPlayBufT.run;
+  TestPlaySpaceTracker.run;
 
-  TestRecordBufT.run;
+  TestRecordSpaceTracker.run;
 
-  TestBufFramesT.run;
+  TestSpaceTrackerFrames.run;
 
-  TestBufferExtS.run;
+  TestBufferExtensions.run;
 )
 

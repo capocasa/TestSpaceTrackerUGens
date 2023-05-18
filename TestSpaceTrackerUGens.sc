@@ -1,4 +1,4 @@
-TestPlayBufT : UnitTest {
+TestPlaySpaceTracker : UnitTest {
   
   var
     s
@@ -23,11 +23,11 @@ TestPlayBufT : UnitTest {
     data = [ 48.0, 0.01, 48.0, 0.01, 48.0, 0.01, 48.0, 0.01, 48.0, 0.01, 48.0, 0.01, 48.0, 0.01, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05 ]
 ;
 
-    SynthDef(\TestPlayBufT, {|rate=0, t_trig=0, start=0, buffer, bufferS|
+    SynthDef(\TestPlaySpaceTracker, {|rate=0, t_trig=0, start=0, buffer, bufferS|
       var control, rec;
-      control = PlayBufT.kr(2, bufferS, rate, t_trig, start);
+      control = PlaySpaceTracker.kr(2, bufferS, rate, t_trig, start);
       rec = RecordBuf.kr(control, buffer, run: rate>0, loop:0);
-      SendReply.kr(Done.kr(rec), '/TestPlayBufT');
+      SendReply.kr(Done.kr(rec), '/TestPlaySpaceTracker');
     }).send(s);
     s.sync;
 
@@ -46,12 +46,12 @@ TestPlayBufT : UnitTest {
         //d.as(Array).round(0.00001).asCompileString.postln;
         datar = d.as(Array);
       });
-    }, '/TestPlayBufT', s.addr).oneShot;
+    }, '/TestPlaySpaceTracker', s.addr).oneShot;
   
     s.sync;
 
     datar = nil;
-    Synth(\TestPlayBufT, [\rate, 1, \buffer, buffer.bufnum, \bufferS, bufferS.bufnum], s);
+    Synth(\TestPlaySpaceTracker, [\rate, 1, \buffer, buffer.bufnum, \bufferS, bufferS.bufnum], s);
     this.asynchAssert({ datar.notNil }, {
       this.assertEquals(datar.round(0.00001), data.round(0.00001));
     }, "data timeout", 1);
@@ -64,13 +64,13 @@ TestPlayBufT : UnitTest {
 
     data = [ 48.0, 0.01, 48.0, 0.01, 48.0, 0.01, 48.0, 0.01, 48.0, 0.01, 48.0, 0.01, 48.0, 0.01, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 48.0, 0.01, 48.0, 0.01, 48.0, 0.01, 48.0, 0.01, 48.0, 0.01, 48.0, 0.01, 48.0, 0.01, 48.0, 0.01, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 49.0, 0.02, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 50.0, 0.03, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 51.0, 0.04, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05, 52.0, 0.05 ];
 
-    SynthDef(\TestPlayBufT, {|rate=0, t_trig=0, start=0, buffer, bufferS|
+    SynthDef(\TestPlaySpaceTracker, {|rate=0, t_trig=0, start=0, buffer, bufferS|
       var control, rec;
       start  = PlayBuf.kr(1, Array.fill(150, 0).put(15, 0).put(30, 0.12).put(45, 0.02).as(LocalBuf));
       t_trig = PlayBuf.kr(1, Array.fill(150, 0).put(15, 1).put(30,    1).put(45,    1).as(LocalBuf));
-      control = PlayBufT.kr(2, bufferS, rate, t_trig, start);
+      control = PlaySpaceTracker.kr(2, bufferS, rate, t_trig, start);
       rec = RecordBuf.kr(control, buffer, run: rate>0, loop:0);
-      SendReply.kr(Done.kr(rec), '/TestPlayBufT');
+      SendReply.kr(Done.kr(rec), '/TestPlaySpaceTracker');
     }).send(s);
     s.sync;
 
@@ -90,11 +90,11 @@ TestPlayBufT : UnitTest {
         d.round(0.00001).asCompileString.postln;
         datar = d;
       });
-    }, '/TestPlayBufT', s.addr).oneShot;
+    }, '/TestPlaySpaceTracker', s.addr).oneShot;
   
     s.sync;
 
-    Synth(\TestPlayBufT, [\rate, 1, \buffer, buffer.bufnum, \bufferS, bufferS.bufnum], s);
+    Synth(\TestPlaySpaceTracker, [\rate, 1, \buffer, buffer.bufnum, \bufferS, bufferS.bufnum], s);
     
     this.asynchAssert({ datar.notNil }, {
       this.assertEquals(datar.round(0.00001), data.round(0.00001));
@@ -104,7 +104,7 @@ TestPlayBufT : UnitTest {
 
 }
 
-TestRecordBufT : UnitTest {
+TestRecordSpaceTracker : UnitTest {
   
   var
     s
@@ -122,10 +122,10 @@ TestRecordBufT : UnitTest {
   
     var bufferS, synth, buffer, data;
     
-    SynthDef(\TestRecordBufT, {|rate=0, t_trig=0, start=0, buffer, bufferS|
+    SynthDef(\TestRecordSpaceTracker, {|rate=0, t_trig=0, start=0, buffer, bufferS|
       var control;
       control = PlayBuf.kr(2, buffer, rate, t_trig, start);
-      RecordBufT.kr([control], bufferS, rate>0, 2);
+      RecordSpaceTracker.kr([control], bufferS, rate>0, 2);
     }).send(s);
     s.sync;
 
@@ -150,7 +150,7 @@ TestRecordBufT : UnitTest {
     
     s.sync;
     
-    Synth(\TestRecordBufT, [\rate, 1, \buffer, buffer.bufnum, \bufferS, bufferS.bufnum], s);
+    Synth(\TestRecordSpaceTracker, [\rate, 1, \buffer, buffer.bufnum, \bufferS, bufferS.bufnum], s);
     
     this.asynchAssert({ data.notNil }, {
       //data.asCompileString.post;
@@ -158,15 +158,15 @@ TestRecordBufT : UnitTest {
     }, "data timeout", 1); 
   }
   
-  // Free before RecordBufT is done
+  // Free before RecordSpaceTracker is done
   test_cutoff {
   
     var bufferS, synth, buffer, data;
-    // DoneAction in PlayBuf, not in RecordBufT
-    SynthDef(\TestRecordBufT, {|rate=0, t_trig=0, start=0, buffer, bufferS|
+    // DoneAction in PlayBuf, not in RecordSpaceTracker
+    SynthDef(\TestRecordSpaceTracker, {|rate=0, t_trig=0, start=0, buffer, bufferS|
       var control;
       control = PlayBuf.kr(2, buffer, rate, t_trig, start, 0, 2);
-      RecordBufT.kr([control], bufferS, rate>0);
+      RecordSpaceTracker.kr([control], bufferS, rate>0);
     }).send(s);
     s.sync;
     buffer = Buffer.loadCollection(s,
@@ -188,7 +188,7 @@ TestRecordBufT : UnitTest {
     }, '/n_end', s.addr).oneShot;
     
     s.sync;
-    Synth(\TestRecordBufT, [\rate, 1, \buffer, buffer.bufnum, \bufferS, bufferS.bufnum], s);
+    Synth(\TestRecordSpaceTracker, [\rate, 1, \buffer, buffer.bufnum, \bufferS, bufferS.bufnum], s);
     
     this.asynchAssert({ data.notNil }, {
       this.assertEquals(data.round(0.00001), [ 0.016000000759959, 48.0, 0.10000000149012, 0.032000001519918, 49.0, 0.20000000298023, 0.048000000417233, 50.0, 0.30000001192093, 0.064000003039837, 51.0, 0.40000000596046, 0.079999998211861, 52.0, 0.5, 0.0, 0.0, 0.0 ].round(0.00001));
@@ -198,8 +198,8 @@ TestRecordBufT : UnitTest {
   test_stop {
   
     var bufferS, synth, buffer, data;
-    // DoneAction in PlayBuf, not in RecordBufT
-    SynthDef(\TestRecordBufT, {|rate=0, t_trig=0, start=0, buffer, bufferS|
+    // DoneAction in PlayBuf, not in RecordSpaceTracker
+    SynthDef(\TestRecordSpaceTracker, {|rate=0, t_trig=0, start=0, buffer, bufferS|
       var control;
       control = PlayBuf.kr(2, buffer, rate, t_trig, start);
       
@@ -213,7 +213,7 @@ TestRecordBufT : UnitTest {
 
         1,
       ].as(LocalBuf));
-      RecordBufT.kr([control], bufferS, rate>0, 2);
+      RecordSpaceTracker.kr([control], bufferS, rate>0, 2);
     }).send(s);
     s.sync;
     buffer = Buffer.loadCollection(s,
@@ -236,7 +236,7 @@ TestRecordBufT : UnitTest {
     }, '/n_end', s.addr).oneShot;
     
     s.sync;
-    Synth(\TestRecordBufT, [\rate, 1, \buffer, buffer.bufnum, \bufferS, bufferS.bufnum], s);
+    Synth(\TestRecordSpaceTracker, [\rate, 1, \buffer, buffer.bufnum, \bufferS, bufferS.bufnum], s);
     
     this.asynchAssert({ data.notNil }, {
       this.assertEquals(data.round(0.00001), [ 0.0080000003799796, 48.0, 0.10000000149012, 0.016000000759959, 49.0, 0.20000000298023, 0.048000000417233, 50.0, 0.30000001192093, 0.064000003039837, 51.0, 0.40000000596046, 0.079999998211861, 52.0, 0.5 ].round(0.00001));
@@ -245,7 +245,7 @@ TestRecordBufT : UnitTest {
 
 }
 
-TestBufFramesT : UnitTest {
+TestSpaceTrackerFrames : UnitTest {
   var
     s, b, coll, startTime, length, responder, is, shall, channels
   ;
@@ -255,7 +255,7 @@ TestBufFramesT : UnitTest {
     this.bootServer(s);
     responder = OSCFunc({|msg|
       is = msg[3..]; 
-    }, '/TestBufFramesT', s.addr);
+    }, '/TestSpaceTrackerFrames', s.addr);
     is = nil;
     channels = nil;
   }
@@ -541,12 +541,12 @@ TestBufFramesT : UnitTest {
     if (coll.isNil) {
       coll = [1,32,0.5,33,1,34];
     };
-    b = Buffer.allocTimed(s,1,channels??1);
+    b = Buffer.allocSpaceTracker(s,1,channels??1);
     s.sync;
     b.sendCollection(coll);
     s.sync;
     {
-      SendReply.kr(DC.kr(1), '/TestBufFramesT', BufFramesT.kr(b, 1, startTime, length, 2));
+      SendReply.kr(DC.kr(1), '/TestSpaceTrackerFrames', BufFramesT.kr(b, 1, startTime, length, 2));
     }.play(s);
     this.asynchAssert({is.notNil},{
       this.assertEquals(is, shall);
@@ -561,7 +561,7 @@ TestBufFramesT : UnitTest {
   }
 }
 
-TestBufferExtS : UnitTest {
+TestBufferExtensions : UnitTest {
   
   var
     s, b, p, f, a, c, x
@@ -570,7 +570,7 @@ TestBufferExtS : UnitTest {
   setUp {
     s = Server.default;
     this.bootServer(s);
-    b = Buffer.allocTimed(s,1,1,128);
+    b = Buffer.allocSpaceTracker(s,1,1,128);
     s.sync;
     b.updateInfo;
     s.sync;
@@ -591,7 +591,7 @@ TestBufferExtS : UnitTest {
     this.assertEquals(b.numFrames, 128, "1-1 numFrames");
     b.free;
 
-    b = Buffer.allocTimed(s,2,2,128);
+    b = Buffer.allocSpaceTracker(s,2,2,128);
     this.assertEquals(b.class, Array, "2-1 class");
     this.assertEquals(b.size, 2, "2-1 size");
     this.assertEquals(b[0].class, Buffer, "2-1 0 class");
@@ -601,17 +601,17 @@ TestBufferExtS : UnitTest {
   }
 
   test_detect {
-    this.assertEquals(b.detectTimed(0.1,3), [ 17, 3, Float.from32Bits(1020054732), Float.from32Bits(1049572144) ]);
+    this.assertEquals(b.detectSpaceTracker(0.1,3), [ 17, 3, Float.from32Bits(1020054732), Float.from32Bits(1049572144) ]);
     s.sync;
   }
 
   test_write {
-    b.writeTimed(p);
+    b.writeSpaceTracker(p);
     s.sync;
     this.fromFile;
     this.assertEquals(a, c, "entire");
   
-    b.writeTimed(p, "aiff", 0.1, 3);
+    b.writeSpaceTracker(p, "aiff", 0.1, 3);
     this.fromFile;
 
     x=Signal[ 0.024999998509884, 0.0625, 0.0703125, 0.078125, 0.0859375, 0.09375, 0.1015625, 0.109375, 0.1171875, 0.125, 0.1328125, 0.140625, 0.1484375, 0.15625, 0.1640625, 0.171875, 0.1796875, 0.1875, 0.1953125, 0.203125, 0.2109375, 0.21875, 0.2265625, 0.234375, 0.2421875, 0.25, 0.2578125, 0.265625, 0.2734375, 0.28125, 0.2890625, 0.296875, 0.27968740463257, 0.3125];
